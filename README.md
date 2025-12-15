@@ -354,5 +354,5 @@ If you want more catalogs, do the following:
 - Then go back to Catalog tab and disable the second half of your catalogs (those that went over the limit).
 - Then save this config again. This will be your **AIOM\#1**.
 - Make another AIOM UUID, and import the "completed" JSON copy from earlier into your **AIOM\#2**.
-- In this new UUID, disable the catalogs you had enabled previously (aka the first half) and before saving, toggle the `Catalog Mode Only` option (on this second UUID).
-- Install both AIOMs into your Stremio and re-order them accordingly per my guide [1. `Cinemeta (Cinebye'd)` 2. `AIOM#1` 3. `AIOM#2` 4. `Rest of your addons (AIOStreams, subtitle addons, etc)`].
+- In this new UUID, disable the catalogs you had enabled previously (aka the first half) and before saving, toggle the `Catalog Mode Only` option right above the `Save Configuration` button (on this second UUID).
+- Install both AIOMs into your Stremio and re-order them via StremThru Side Kick accordingly: [1. `Cinemeta (Cinebye'd)` 2. `AIOM#1` 3. `AIOM#2` 4. `Rest of your addons (AIOStreams, subtitle addons, etc)`].
