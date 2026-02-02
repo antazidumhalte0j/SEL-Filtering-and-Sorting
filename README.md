@@ -23,30 +23,30 @@ Lastly, please do note my AIOStreams template *does not* include any catalogs. T
 ## ✨ Release Notes
 
 February 2, 2026: What's new in template v1.4.0!
-- Addons adjusted slightly: Default urls, SeaDex addon prioritized, optional Torbox/Debridio.
+- Addons adjusted slightly: Default urls, SeaDex addon prioritized, optional Torbox.
 - Filtering further improved: New recent features such as passthrough, bitrate and math in SEL got incorporated into old and new SELs alike. 
 - Formatter upgraded: Bitrate display, shorter titles, everything tweaked for a cleaner than ever look.
 - Sort Order updated: Stream Expression Score added replacing Regex Patterns from before.
-- Full list of Optional SELs (more to come) are found [here](https://github.com/Tam-Taro/SEL-Filtering-and-Sorting/edit/main/README.md#-optional-sels).
+- Full list of Optional SELs (more to come) are found [here](https://github.com/Tam-Taro/SEL-Filtering-and-Sorting#-optional-sels).
 <details>
   <summary>v1.4.0</summary>
   <p></p>
 	
 **Addons** 
 - Current Addons
-  - Debrid Template: STore, TB Search (new, optional), SeaDex (new), Debridio (new, optional), STorz, Comet, MediaFusion, Knaben, AnimeTosho, Torrentio.
+  - Debrid Template: STore, TB Search (new, optional), SeaDex (new), STorz, Comet, MediaFusion, Knaben, AnimeTosho, Torrentio.
   - P2P Template: Comet, STorz, MediaFusion, Torrentio, TorrentsDB, Peerflix, Nuvio Anime, Nuvio Streams, WebStreamr.  
 - Changes:
   - Timeout reduced to 7000 ms for all addons (from 7500 ms).
   - Default empty base urls. Will use whichever default your AIOS hosters decide. Select to change base url as needed.  
   - STorz switched back to Munif's addon instead of Torznab addon so base url field can be left empty.
   - SeaDex newly added for Debrid template and prioritized highly in the order.  
-  - New optional addons like Torbox Search (torrent), Newznab Torbox Search (usenet) and Debridio
+  - New optional addon Torbox Search (torrent) comes disabled.
   
 **Filters**  
 - New bitrate filter (adapted by G from [TRaSH guide](https://trash-guides.info/Radarr/Radarr-Quality-Settings-File-Size/#standard)) removes low bitrate streams based on queryType detection and quality/resolution thresholds (e.g., 4K WEB-DL >4.6Mbps).  
 - New exclusions for keywords "r00", "iso" in excludedKeywords.  
-- Digital Release Filter enabled for all query types.  
+- Digital Release Filter enabled for all query types (movies and series and anime).  
 - Preferred Languages updated: "Original" added after English. Japan and Korean now removed as "Original" takes their place.  
 
 **Formatter**  
