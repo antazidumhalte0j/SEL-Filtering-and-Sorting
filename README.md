@@ -545,7 +545,23 @@ These are setup configs to use with AIOMetadata. It is a powerful tool for all t
 <details>
 <summary>Februrary 2, 2026 (v1.2.3):</summary> 
 <p></p>
+ 
+ - Replaced old Seasonal with new that is now working, showing Valentine's Day content. Going forward this won't need to change anymore to see seasonal update
+ - Without anime config got all the genre catalogs (eg. Action to Thriller) enabled, all decade lists randomized per page
+ - On anime config, removed AniDB Latest Started (as a lot of the titles don't have proper metadata), replaced previous custom AniList Trending with builtin Anilist Trending
+   - Added Crunchyroll Latest (movies/series) and various genre catalogs onto Home
+   - Disabled excess MAL catalogs (Upcoming, Studios) to free up space
+</details>
 
+<details>
+<summary>December 7, 2025 (v1.2.2):</summary> 
+<p></p>
+	
+ - Enabled AI features, search catalogs.
+ - Increased global cache TTL from 40000 to 43200 seconds across catalogs.
+ - Replaced 'Tis the Season' with 'Seasonal' where it'll auto-update as season changes
+ - Minor sort order tweaks on various catalogs (e.g., some lastairdate/released from desc → asc).
+ - Enabled more genres catalogs (eg. Action, Comedy) for config without anime.
 </details>
 
 <details>
