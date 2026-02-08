@@ -1,0 +1,335 @@
+{
+  "metadata": {
+    "id": "jellyfin-format-2026-02-08.13-42-55-ugaz4cq",
+    "name": "Jellyfin Format",
+    "description": "This template includes changes specific to the Jellyfin install",
+    "source": "external",
+    "author": "Bayflix",
+    "version": "0.0.1",
+    "category": "Jellyfin",
+    "serviceRequired": false,
+    "setToSaveInstallMenu": true
+  },
+  "config": {
+    "presets": [
+      {
+        "type": "custom",
+        "instanceId": "723",
+        "enabled": true,
+        "options": {
+          "name": "aiometa",
+          "manifestUrl": "https://aiometadatafortheweebs.midnightignite.me/stremio/f8ecf908-24d0-4229-a486-2a97baac21ab/manifest.json",
+          "timeout": 5000,
+          "resources": [],
+          "mediaTypes": [],
+          "libraryAddon": false,
+          "resultPassthrough": false,
+          "forceToTop": false
+        }
+      },
+      {
+        "type": "stremthruStore",
+        "instanceId": "bdd",
+        "enabled": true,
+        "options": {
+          "name": "STore",
+          "timeout": 5000,
+          "resources": [
+            "stream"
+          ],
+          "mediaTypes": [],
+          "webDl": true,
+          "usenet": false
+        }
+      },
+      {
+        "type": "torbox-search",
+        "instanceId": "969",
+        "enabled": true,
+        "options": {
+          "name": "TorBox Search",
+          "timeout": 5000,
+          "sources": [
+            "torrent"
+          ],
+          "services": [
+            "torbox"
+          ],
+          "mediaTypes": [],
+          "userSearchEngines": false,
+          "onlyShowUserSearchResults": false,
+          "useMultipleInstances": false
+        }
+      },
+      {
+        "type": "seadex",
+        "instanceId": "eb6",
+        "enabled": true,
+        "options": {
+          "name": "SeaDex",
+          "timeout": 5000,
+          "mediaTypes": [
+            "anime"
+          ]
+        }
+      },
+      {
+        "type": "torznab",
+        "instanceId": "ca6",
+        "enabled": true,
+        "options": {
+          "name": "STorz",
+          "torznabUrl": "https://stremthru.13377001.xyz/v0/torznab",
+          "apiPath": "/api",
+          "timeout": 5000,
+          "mediaTypes": [],
+          "searchMode": "both",
+          "paginate": false,
+          "useMultipleInstances": false
+        }
+      },
+      {
+        "type": "nzbhydra",
+        "instanceId": "e3c",
+        "enabled": true,
+        "options": {
+          "name": "NZBHydra",
+          "timeout": 5000,
+          "services": [
+            "nzbdav"
+          ],
+          "mediaTypes": [],
+          "nzbhydraUrl": "http://nzbhydra2:5076",
+          "searchMode": "both",
+          "paginate": false,
+          "checkOwned": true,
+          "useMultipleInstances": false,
+          "nzbhydraApiKey": "<template_placeholder>"
+        }
+      },
+      {
+        "type": "animetosho",
+        "instanceId": "9af",
+        "enabled": true,
+        "options": {
+          "name": "AnimeTosho",
+          "timeout": 5000,
+          "services": [
+            "torbox"
+          ],
+          "mediaTypes": [
+            "anime"
+          ],
+          "useMultipleInstances": false
+        }
+      },
+      {
+        "type": "neko-bt",
+        "instanceId": "002",
+        "enabled": true,
+        "options": {
+          "name": "nekoBT",
+          "timeout": 5000,
+          "mediaTypes": [
+            "anime"
+          ],
+          "useMultipleInstances": false,
+          "services": [
+            "torbox"
+          ],
+          "apiKey": "<template_placeholder>"
+        }
+      },
+      {
+        "type": "knaben",
+        "instanceId": "235",
+        "enabled": true,
+        "options": {
+          "name": "Knaben",
+          "timeout": 5000,
+          "services": [
+            "torbox"
+          ],
+          "mediaTypes": [],
+          "useMultipleInstances": false
+        }
+      },
+      {
+        "type": "debridio",
+        "instanceId": "e92",
+        "enabled": true,
+        "options": {
+          "name": "Debridio Scraper",
+          "timeout": 5000,
+          "resources": [
+            "stream"
+          ],
+          "services": [
+            "torbox"
+          ],
+          "mediaTypes": [],
+          "debridioApiKey": "<template_placeholder>"
+        }
+      }
+    ],
+    "formatter": {
+      "id": "custom",
+      "definition": {
+        "name": "{service.shortName::exists::and::stream.library::isfalse[\"[▤ {service.shortName}] \"||\"\"]}{service.shortName::exists::and::stream.library::istrue[\"[☁︎ {service.shortName}] \"||\"\"]}{stream.resolution::exists[\"{stream.resolution::replace('2160p', '2160p')::replace('1080p', '1080p')::replace('720p', ' 720p')::replace('480p', ' 480p')} \"||\"\"]}{stream.quality::exists[\"{stream.quality} \"||\"\"]}{stream.visualTags::exists[\"{stream.visualTags::join('·')} \"||\"\"]}{stream.seadexBest::istrue[\"🥇 \"||\"\"]}{stream.seadex::istrue::and::stream.seadexBest::isfalse[\"🥈 \"||\"\"]}{stream.seadex::isfalse::and::stream.rseMatched::length::>0[\" [{stream.rseMatched::join('·')}] \"||\"\"]}{stream.size::>0[\"{stream.size::bytes}\"||\"\"]}",
+        "description": ""
+      }
+    },
+    "statistics": {
+      "enabled": false,
+      "statsToShow": [
+        "addon",
+        "filter"
+      ]
+    },
+    "catalogModifications": [
+      {
+        "id": "723e3b0.mdblist.86934",
+        "name": "Latest Movies (Digital Release)",
+        "type": "movie",
+        "enabled": true,
+        "shuffle": false,
+        "usePosterService": false,
+        "hideable": false,
+        "searchable": false,
+        "addonName": "aiometa"
+      },
+      {
+        "id": "723e3b0.mdblist.136546",
+        "name": "Top 10 Movies of the Day",
+        "type": "movie",
+        "enabled": true,
+        "shuffle": false,
+        "usePosterService": false,
+        "hideable": true,
+        "searchable": false,
+        "addonName": "aiometa"
+      },
+      {
+        "id": "723e3b0.mdblist.136545",
+        "name": "Top 10 Shows of the Day",
+        "type": "series",
+        "enabled": true,
+        "shuffle": false,
+        "usePosterService": false,
+        "hideable": true,
+        "searchable": false,
+        "addonName": "aiometa"
+      },
+      {
+        "id": "723e3b0.mdblist.89200",
+        "name": "Most Popular Movies",
+        "type": "movie",
+        "enabled": true,
+        "shuffle": false,
+        "usePosterService": false,
+        "hideable": false,
+        "searchable": false,
+        "addonName": "aiometa"
+      },
+      {
+        "id": "723e3b0.mdblist.89201",
+        "name": "Most Popular Shows",
+        "type": "series",
+        "enabled": true,
+        "shuffle": false,
+        "usePosterService": false,
+        "hideable": false,
+        "searchable": false,
+        "addonName": "aiometa"
+      },
+      {
+        "id": "723e3b0.mdblist.130778",
+        "name": "Popular KDrama Movies",
+        "type": "movie",
+        "enabled": true,
+        "shuffle": false,
+        "usePosterService": false,
+        "hideable": true,
+        "searchable": false,
+        "addonName": "aiometa"
+      },
+      {
+        "id": "723e3b0.mdblist.130775",
+        "name": "Popular KDrama Shows",
+        "type": "series",
+        "enabled": true,
+        "shuffle": false,
+        "usePosterService": false,
+        "hideable": true,
+        "searchable": false,
+        "addonName": "aiometa"
+      },
+      {
+        "id": "723e3b0.mdblist.2202",
+        "name": "Latest Blu-ray Releases",
+        "type": "movie",
+        "enabled": true,
+        "shuffle": false,
+        "usePosterService": false,
+        "hideable": false,
+        "searchable": false,
+        "addonName": "aiometa"
+      },
+      {
+        "id": "723e3b0.people_search.people_search_movie",
+        "name": "People Search",
+        "type": "movie",
+        "enabled": false,
+        "shuffle": false,
+        "usePosterService": false,
+        "hideable": false,
+        "searchable": false,
+        "addonName": "aiometa"
+      },
+      {
+        "id": "723e3b0.people_search.people_search_series",
+        "name": "People Search",
+        "type": "series",
+        "enabled": false,
+        "shuffle": false,
+        "usePosterService": false,
+        "hideable": false,
+        "searchable": false,
+        "addonName": "aiometa"
+      },
+      {
+        "id": "723e3b0.search.movie",
+        "name": "Movies Search",
+        "type": "movie",
+        "enabled": true,
+        "shuffle": false,
+        "usePosterService": true,
+        "hideable": false,
+        "searchable": false,
+        "addonName": "aiometa"
+      },
+      {
+        "id": "723e3b0.search.series",
+        "name": "Series Search",
+        "type": "series",
+        "enabled": true,
+        "shuffle": false,
+        "usePosterService": true,
+        "hideable": false,
+        "searchable": false,
+        "addonName": "aiometa"
+      },
+      {
+        "id": "723e3b0.calendar-videos",
+        "name": "Calendar videos",
+        "type": "series",
+        "enabled": false,
+        "shuffle": false,
+        "usePosterService": true,
+        "hideable": false,
+        "searchable": false,
+        "addonName": "aiometa"
+      }
+    ]
+  }
+}
