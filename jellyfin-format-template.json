@@ -5,7 +5,7 @@
     "description": "This template includes changes specific to the Jellyfin install",
     "source": "external",
     "author": "Bayflix",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "category": "Jellyfin",
     "serviceRequired": false,
     "setToSaveInstallMenu": true
